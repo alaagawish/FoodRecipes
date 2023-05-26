@@ -20,7 +20,7 @@ class recipeCell: UITableViewCell {
     var isFav = false
     override func awakeFromNib() {
         super.awakeFromNib()
-        ViewUtilities.setCornerRadius(view: btnFavIcon, radius: 2.5)
+        ViewUtilities.setCornerRadius(view: btnFavIcon, radius: 3.2)
         // Initializion code
     }
 
@@ -40,6 +40,7 @@ class recipeCell: UITableViewCell {
                 btnFavIcon.setImage(image, for: .normal)
             }
         }
+        isFav.toggle()
         
     }
 }

@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043F50A02A20E8A800F502FB /* FavStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043F509F2A20E8A800F502FB /* FavStoryboard.storyboard */; };
 		0489E4522A209FC100D72497 /* recipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489E4502A209FC100D72497 /* recipeCell.swift */; };
 		0489E4532A209FC100D72497 /* recipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0489E4512A209FC100D72497 /* recipeCell.xib */; };
 		04989CB52A20AEDE00BC9D05 /* ViewUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04989CB42A20AEDE00BC9D05 /* ViewUtilities.swift */; };
+		04D260FA2A20F188009423B7 /* FavModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D260F92A20F188009423B7 /* FavModel.swift */; };
+		04D260FC2A20F1A0009423B7 /* FavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D260FB2A20F1A0009423B7 /* FavViewModel.swift */; };
+		04D260FE2A210271009423B7 /* LocolDatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D260FD2A210271009423B7 /* LocolDatabaseProtocol.swift */; };
+		04D261002A210772009423B7 /* CoreDataConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D260FF2A210772009423B7 /* CoreDataConstants.swift */; };
 		2C38067A68D0ADD16A52E2EF /* Pods_FoodRecipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DE9C67666DF28BE73C819E /* Pods_FoodRecipes.framework */; };
 		615949512A2033BA00C4FC4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615949502A2033BA00C4FC4C /* AppDelegate.swift */; };
 		615949532A2033BA00C4FC4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615949522A2033BA00C4FC4C /* SceneDelegate.swift */; };
@@ -21,7 +26,7 @@
 		6159496B2A2033BC00C4FC4C /* FoodRecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6159496A2A2033BC00C4FC4C /* FoodRecipesTests.swift */; };
 		615949752A2033BC00C4FC4C /* FoodRecipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615949742A2033BC00C4FC4C /* FoodRecipesUITests.swift */; };
 		615949772A2033BC00C4FC4C /* FoodRecipesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615949762A2033BC00C4FC4C /* FoodRecipesUITestsLaunchTests.swift */; };
-		617CBE5C2A2098D9005576C1 /* DatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617CBE5B2A2098D9005576C1 /* DatabaseProtocol.swift */; };
+		617CBE5C2A2098D9005576C1 /* CoreDataDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617CBE5B2A2098D9005576C1 /* CoreDataDataSource.swift */; };
 		617CBE5E2A209912005576C1 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617CBE5D2A209912005576C1 /* NetworkProtocol.swift */; };
 		617CBE602A20996E005576C1 /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617CBE5F2A20996E005576C1 /* Credit.swift */; };
 		617CBE682A2099BD005576C1 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617CBE672A2099BD005576C1 /* FavouriteViewController.swift */; };
@@ -48,9 +53,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043F509F2A20E8A800F502FB /* FavStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavStoryboard.storyboard; sourceTree = "<group>"; };
 		0489E4502A209FC100D72497 /* recipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeCell.swift; sourceTree = "<group>"; };
 		0489E4512A209FC100D72497 /* recipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = recipeCell.xib; sourceTree = "<group>"; };
 		04989CB42A20AEDE00BC9D05 /* ViewUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtilities.swift; sourceTree = "<group>"; };
+		04D260F92A20F188009423B7 /* FavModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavModel.swift; sourceTree = "<group>"; };
+		04D260FB2A20F1A0009423B7 /* FavViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavViewModel.swift; sourceTree = "<group>"; };
+		04D260FD2A210271009423B7 /* LocolDatabaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocolDatabaseProtocol.swift; sourceTree = "<group>"; };
+		04D260FF2A210772009423B7 /* CoreDataConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataConstants.swift; sourceTree = "<group>"; };
 		14DE9C67666DF28BE73C819E /* Pods_FoodRecipes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodRecipes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6159494D2A2033BA00C4FC4C /* FoodRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		615949502A2033BA00C4FC4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +76,7 @@
 		615949702A2033BC00C4FC4C /* FoodRecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodRecipesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		615949742A2033BC00C4FC4C /* FoodRecipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecipesUITests.swift; sourceTree = "<group>"; };
 		615949762A2033BC00C4FC4C /* FoodRecipesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecipesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		617CBE5B2A2098D9005576C1 /* DatabaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseProtocol.swift; sourceTree = "<group>"; };
+		617CBE5B2A2098D9005576C1 /* CoreDataDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSource.swift; sourceTree = "<group>"; };
 		617CBE5D2A209912005576C1 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
 		617CBE5F2A20996E005576C1 /* Credit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credit.swift; sourceTree = "<group>"; };
 		617CBE672A2099BD005576C1 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
@@ -107,8 +117,34 @@
 			isa = PBXGroup;
 			children = (
 				04989CB42A20AEDE00BC9D05 /* ViewUtilities.swift */,
+				04D260FF2A210772009423B7 /* CoreDataConstants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		04D260F62A20EEFB009423B7 /* FavModel */ = {
+			isa = PBXGroup;
+			children = (
+				04D260F92A20F188009423B7 /* FavModel.swift */,
+			);
+			path = FavModel;
+			sourceTree = "<group>";
+		};
+		04D260F72A20EF28009423B7 /* FavView */ = {
+			isa = PBXGroup;
+			children = (
+				043F509F2A20E8A800F502FB /* FavStoryboard.storyboard */,
+				617CBE672A2099BD005576C1 /* FavouriteViewController.swift */,
+			);
+			path = FavView;
+			sourceTree = "<group>";
+		};
+		04D260F82A20EF31009423B7 /* FavViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04D260FB2A20F1A0009423B7 /* FavViewModel.swift */,
+			);
+			path = FavViewModel;
 			sourceTree = "<group>";
 		};
 		06C9B89DF79095235BB0A739 /* Frameworks */ = {
@@ -234,7 +270,8 @@
 		617CBE5A2A20984A005576C1 /* LocalSource */ = {
 			isa = PBXGroup;
 			children = (
-				617CBE5B2A2098D9005576C1 /* DatabaseProtocol.swift */,
+				617CBE5B2A2098D9005576C1 /* CoreDataDataSource.swift */,
+				04D260FD2A210271009423B7 /* LocolDatabaseProtocol.swift */,
 			);
 			path = LocalSource;
 			sourceTree = "<group>";
@@ -252,7 +289,9 @@
 		617CBE632A209986005576C1 /* Favourite */ = {
 			isa = PBXGroup;
 			children = (
-				617CBE672A2099BD005576C1 /* FavouriteViewController.swift */,
+				04D260F82A20EF31009423B7 /* FavViewModel */,
+				04D260F72A20EF28009423B7 /* FavView */,
+				04D260F62A20EEFB009423B7 /* FavModel */,
 			);
 			path = Favourite;
 			sourceTree = "<group>";
@@ -411,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				615949602A2033BC00C4FC4C /* LaunchScreen.storyboard in Resources */,
+				043F50A02A20E8A800F502FB /* FavStoryboard.storyboard in Resources */,
 				6159495D2A2033BC00C4FC4C /* Assets.xcassets in Resources */,
 				9F1A19AE2A209F8100B7767B /* HomeStoryboard.storyboard in Resources */,
 				615949582A2033BA00C4FC4C /* Main.storyboard in Resources */,
@@ -483,7 +523,10 @@
 			files = (
 				615949552A2033BA00C4FC4C /* ViewController.swift in Sources */,
 				0489E4522A209FC100D72497 /* recipeCell.swift in Sources */,
+				04D261002A210772009423B7 /* CoreDataConstants.swift in Sources */,
+				04D260FC2A20F1A0009423B7 /* FavViewModel.swift in Sources */,
 				615949512A2033BA00C4FC4C /* AppDelegate.swift in Sources */,
+				04D260FE2A210271009423B7 /* LocolDatabaseProtocol.swift in Sources */,
 				617CBE5E2A209912005576C1 /* NetworkProtocol.swift in Sources */,
 				615949532A2033BA00C4FC4C /* SceneDelegate.swift in Sources */,
 				9F1A19AC2A209F1A00B7767B /* HomeViewModel.swift in Sources */,
@@ -492,7 +535,8 @@
 				04989CB52A20AEDE00BC9D05 /* ViewUtilities.swift in Sources */,
 				617CBE602A20996E005576C1 /* Credit.swift in Sources */,
 				6159495B2A2033BA00C4FC4C /* FoodRecipes.xcdatamodeld in Sources */,
-				617CBE5C2A2098D9005576C1 /* DatabaseProtocol.swift in Sources */,
+				04D260FA2A20F188009423B7 /* FavModel.swift in Sources */,
+				617CBE5C2A2098D9005576C1 /* CoreDataDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,7 +718,7 @@
 				INFOPLIST_FILE = FoodRecipes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = FavStoryboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -702,7 +746,7 @@
 				INFOPLIST_FILE = FoodRecipes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = FavStoryboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
