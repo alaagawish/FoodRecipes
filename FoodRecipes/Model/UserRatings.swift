@@ -7,5 +7,7 @@
 
 import Foundation
 struct UserRatings: Decodable{
-    
+    //    let countPositive: Int
+    //    let score: Double
+    //    let countNegative: Int
 }

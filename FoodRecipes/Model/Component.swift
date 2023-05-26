@@ -7,5 +7,10 @@
 
 import Foundation
 struct Component: Decodable{
-    
+    let position: Int
+    // let measurements: [Measurement]
+    // let id: Int
+    let rawText: String
+    let extraComment: String
+    let ingredient: Ingredient
 }

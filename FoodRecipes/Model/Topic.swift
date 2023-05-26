@@ -7,5 +7,7 @@
 
 import Foundation
 struct Topic: Decodable{
+    //    let name: String
+    //    let slug: String
     
 }

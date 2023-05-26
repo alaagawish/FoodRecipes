@@ -6,3 +6,9 @@
 //
 
 import Foundation
+struct Credit: Decodable{
+    
+    let name: String
+    //let type: String
+    
+}

@@ -7,11 +7,11 @@
 
 import Foundation
 struct Instruction: Decodable{
-    let start_time: Int
-    let appliance: String
-    let end_time: Int
-    let temperature: Int
+    let startTime: Int
+    //let appliance: String
+    //let endTime: Int
+    //let temperature: Int
     let id: Int
     let position: Int
-    let display_text: String
+    let displayText: String
 }

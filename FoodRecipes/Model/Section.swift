@@ -7,5 +7,7 @@
 
 import Foundation
 struct Section: Decodable{
-    
+    let components: [Component]
+    let name: String
+    //    let position: Int
 }
