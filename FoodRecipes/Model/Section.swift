@@ -8,6 +8,12 @@
 import Foundation
 struct Section: Decodable{
     let components: [Component]
-    let name: String
-    //    let position: Int
+    let name: String?
+    let position: Int
+    
+    private enum CodingKeys: String, CodingKey {
+        case components = "components"
+        case name = "name"
+        case position = "position"
+    }
 }

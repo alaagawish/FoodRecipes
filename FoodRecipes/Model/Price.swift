@@ -8,10 +8,5 @@
 import Foundation
 struct Price: Decodable {
     
-    //    let consumptionPortion: Int
-    //    let total: Int
-    //    let updatedAt: String
-    //    let portion: Int
-    //    let consumptionTotal: Int
     
 }

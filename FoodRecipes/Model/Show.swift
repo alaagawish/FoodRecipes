@@ -7,6 +7,10 @@
 
 import Foundation
 struct Show: Decodable{
-    let name: String
-    //  let id: Int
-}
+    let name: String?
+    let id: Int
+    
+    private enum CodingKeys: String, CodingKey {
+        case name = "name"
+        case id = "id"
+    }}

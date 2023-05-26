@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import Alamofire
+
+protocol NetworkProtocol{
+    
+    func getData(path: String, parameters: Parameters, handler: @escaping (MyResponse?) -> Void) 
+}

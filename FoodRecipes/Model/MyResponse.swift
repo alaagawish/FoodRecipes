@@ -12,4 +12,9 @@ struct MyResponse: Decodable {
     let count: Int
     let results: [Result]
     
+    private enum CodingKeys: String, CodingKey {
+        case count = "count"
+        case results = "results"
+    }
+    
 }
