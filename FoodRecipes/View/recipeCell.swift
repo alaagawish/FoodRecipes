@@ -31,6 +31,8 @@ class recipeCell: UITableViewCell {
     }
     
     @IBAction func btnFavAction(_ sender: Any) {
+
+    isFav.toggle()
         if isFav{
             if let image = UIImage(named: "fillFavIcon") {
                 btnFavIcon.setImage(image, for: .normal)
@@ -42,4 +44,12 @@ class recipeCell: UITableViewCell {
         }
         
     }
+
+
+
+//  override func layoutSubviews() {
+//          super.layoutSubviews()
+//    contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8))
+//      }
+
 }

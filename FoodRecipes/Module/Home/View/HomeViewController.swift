@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   @IBOutlet weak var dessertView: UIView!
   @IBOutlet weak var dessertStackView: UIStackView!
@@ -20,6 +20,8 @@ class HomeViewController: UIViewController {
   @IBOutlet weak var popularView: UIView!
   @IBOutlet weak var popularStackView: UIStackView!
 
+  @IBOutlet weak var homeTableView: UITableView!
+
   var categoriesArray: [UIView?] = []
   var categoriesStackArray: [UIStackView?] = []
 //  var selectedStack:
@@ -31,6 +33,26 @@ class HomeViewController: UIViewController {
 
     addGestures()
 
+    let cellNib = UINib(nibName: "recipeCell", bundle: nil)
+    homeTableView.register(cellNib, forCellReuseIdentifier: "recipecell")
+  }
+
+  func numberOfSections(in tableView: UITableView) -> Int {
+    1
+  }
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    5
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "recipecell", for: indexPath) as! recipeCell
+
+    cell.lblChefName.text = "Hossam"
+    cell.lblRecipeName.text = "Pizza"
+    cell.lblServings.text = "served"
+
+
+    return cell
   }
 
 
