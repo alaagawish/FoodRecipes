@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A36-by-dRJ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -191,22 +191,16 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="9pn-x2-Uug"/>
+                                    <constraint firstAttribute="height" constant="100" id="LdC-95-46e"/>
                                 </constraints>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ohC-HI-sZX">
-                                <rect key="frame" x="0.0" y="230.33333333333331" width="393" height="571.66666666666674"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ohC-HI-sZX">
+                                <rect key="frame" x="0.0" y="230.33333333333331" width="393" height="522.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="q0T-Xz-u5J">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q0T-Xz-u5J" id="zTD-P2-pTF">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="zT1-d6-SZ5"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="khY-5z-tJM"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -223,6 +217,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ohC-HI-sZX" secondAttribute="trailing" id="t1W-fO-7ut"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="home" id="pCZ-89-ygU"/>
                     <connections>
                         <outlet property="breakfastStackView" destination="2Hq-c2-DzY" id="Ptw-gw-phi"/>
                         <outlet property="breakfastView" destination="G5j-PJ-VOa" id="J8v-yH-rhb"/>
@@ -230,6 +225,7 @@
                         <outlet property="dessertView" destination="EXZ-qc-yzB" id="UpS-J6-fQK"/>
                         <outlet property="dinnerStackView" destination="q6J-ew-V3z" id="3o7-AM-c1X"/>
                         <outlet property="dinnerView" destination="IvP-un-Yam" id="ZMP-Hk-lGn"/>
+                        <outlet property="homeTableView" destination="ohC-HI-sZX" id="9aN-64-h9X"/>
                         <outlet property="launchStackView" destination="MLe-CK-Gi2" id="MFo-hD-Z4N"/>
                         <outlet property="launchView" destination="TNM-Y5-H5N" id="tpc-hD-L27"/>
                         <outlet property="popularStackView" destination="1IA-eK-NTX" id="Vpg-kV-i3L"/>
@@ -237,6 +233,23 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980.91603053435108" y="-34.507042253521128"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="mZC-Ta-L63">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="A36-by-dRJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fpq-tH-qVW">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="afo-X5-rAj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pNI-Lw-TN3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
         </scene>
@@ -246,6 +259,7 @@
         <image name="cake" width="44" height="44"/>
         <image name="dinner" width="44" height="44"/>
         <image name="fire" width="44" height="44"/>
+        <image name="home" width="40" height="40"/>
         <image name="lunch" width="44" height="44"/>
         <namedColor name="CategoryColor">
             <color red="0.85098039215686272" green="0.58823529411764708" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
