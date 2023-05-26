@@ -23,6 +23,8 @@
 		617CBE602A20996E005576C1 /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617CBE5F2A20996E005576C1 /* Credit.swift */; };
 		617CBE682A2099BD005576C1 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617CBE672A2099BD005576C1 /* FavouriteViewController.swift */; };
 		617CBE6A2A2099C9005576C1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617CBE692A2099C9005576C1 /* HomeViewController.swift */; };
+		9F1A19AC2A209F1A00B7767B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A19AB2A209F1A00B7767B /* HomeViewModel.swift */; };
+		9F1A19AE2A209F8100B7767B /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F1A19AD2A209F8100B7767B /* HomeStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		617CBE692A2099C9005576C1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		676AAFF217EF0797A7CE922B /* Pods-FoodRecipes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodRecipes.release.xcconfig"; path = "Target Support Files/Pods-FoodRecipes/Pods-FoodRecipes.release.xcconfig"; sourceTree = "<group>"; };
 		6E0CB817DD2C7843EC3D6D7F /* Pods-FoodRecipes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodRecipes.debug.xcconfig"; path = "Target Support Files/Pods-FoodRecipes/Pods-FoodRecipes.debug.xcconfig"; sourceTree = "<group>"; };
+		9F1A19AB2A209F1A00B7767B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9F1A19AD2A209F8100B7767B /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,7 +225,9 @@
 		617CBE622A209980005576C1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				617CBE692A2099C9005576C1 /* HomeViewController.swift */,
+				9F1A19AA2A209EDE00B7767B /* ViewModel */,
+				9F1A19A92A209ED500B7767B /* Model */,
+				9F1A19A82A209EB800B7767B /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -253,6 +259,30 @@
 		617CBE662A2099A6005576C1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9F1A19A82A209EB800B7767B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				617CBE692A2099C9005576C1 /* HomeViewController.swift */,
+				9F1A19AD2A209F8100B7767B /* HomeStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F1A19A92A209ED500B7767B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9F1A19AA2A209EDE00B7767B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9F1A19AB2A209F1A00B7767B /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -365,6 +395,7 @@
 			files = (
 				615949602A2033BC00C4FC4C /* LaunchScreen.storyboard in Resources */,
 				6159495D2A2033BC00C4FC4C /* Assets.xcassets in Resources */,
+				9F1A19AE2A209F8100B7767B /* HomeStoryboard.storyboard in Resources */,
 				615949582A2033BA00C4FC4C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +467,7 @@
 				615949512A2033BA00C4FC4C /* AppDelegate.swift in Sources */,
 				617CBE5E2A209912005576C1 /* NetworkProtocol.swift in Sources */,
 				615949532A2033BA00C4FC4C /* SceneDelegate.swift in Sources */,
+				9F1A19AC2A209F1A00B7767B /* HomeViewModel.swift in Sources */,
 				617CBE682A2099BD005576C1 /* FavouriteViewController.swift in Sources */,
 				617CBE6A2A2099C9005576C1 /* HomeViewController.swift in Sources */,
 				617CBE602A20996E005576C1 /* Credit.swift in Sources */,
