@@ -26,6 +26,9 @@
 		61558E9D2A20DA8700D13E55 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61558E9C2A20DA8700D13E55 /* Ingredient.swift */; };
 		61558E9F2A20E04B00D13E55 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61558E9E2A20E04B00D13E55 /* Recipe.swift */; };
 		61558EA12A20E60600D13E55 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61558EA02A20E60600D13E55 /* Network.swift */; };
+		61558EA32A2110F600D13E55 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61558EA22A2110F600D13E55 /* NetworkTests.swift */; };
+		61558EA52A21110E00D13E55 /* NetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61558EA42A21110E00D13E55 /* NetworkMock.swift */; };
+		61558EA72A21182C00D13E55 /* NetworkMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61558EA62A21182C00D13E55 /* NetworkMockTests.swift */; };
 		615949512A2033BA00C4FC4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615949502A2033BA00C4FC4C /* AppDelegate.swift */; };
 		615949532A2033BA00C4FC4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615949522A2033BA00C4FC4C /* SceneDelegate.swift */; };
 		615949552A2033BA00C4FC4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615949542A2033BA00C4FC4C /* ViewController.swift */; };
@@ -80,6 +83,9 @@
 		61558E9C2A20DA8700D13E55 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		61558E9E2A20E04B00D13E55 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		61558EA02A20E60600D13E55 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		61558EA22A2110F600D13E55 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		61558EA42A21110E00D13E55 /* NetworkMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMock.swift; sourceTree = "<group>"; };
+		61558EA62A21182C00D13E55 /* NetworkMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMockTests.swift; sourceTree = "<group>"; };
 		6159494D2A2033BA00C4FC4C /* FoodRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		615949502A2033BA00C4FC4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		615949522A2033BA00C4FC4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +196,9 @@
 			isa = PBXGroup;
 			children = (
 				6159496A2A2033BC00C4FC4C /* FoodRecipesTests.swift */,
+				61558EA22A2110F600D13E55 /* NetworkTests.swift */,
+				61558EA42A21110E00D13E55 /* NetworkMock.swift */,
+				61558EA62A21182C00D13E55 /* NetworkMockTests.swift */,
 			);
 			path = FoodRecipesTests;
 			sourceTree = "<group>";
@@ -520,7 +529,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61558EA72A21182C00D13E55 /* NetworkMockTests.swift in Sources */,
+				61558EA32A2110F600D13E55 /* NetworkTests.swift in Sources */,
 				6159496B2A2033BC00C4FC4C /* FoodRecipesTests.swift in Sources */,
+				61558EA52A21110E00D13E55 /* NetworkMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

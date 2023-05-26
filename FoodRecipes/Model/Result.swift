@@ -9,7 +9,7 @@ import Foundation
 struct Result: Decodable{
     let seoTitle: String?
     let language: String
-    let price: Price
+    let price: Price?
     let slug: String
     //let brandId: Any
     let numServings: Int
@@ -59,7 +59,7 @@ struct Result: Decodable{
     // let inspiredByUrl: Any
     let credits: [Credit]
     // let videoId: Any
-    let similarity: Double
+    let similarity: Double?
     
     private enum CodingKeys: String, CodingKey {
         case seoTitle = "seo_title"
