@@ -41,12 +41,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     homeTableView.register(cellNib, forCellReuseIdentifier: "recipecell")
 
     setupIndicator()
-    viewModel = HomeViewModel()
 
+    viewModel = HomeViewModel(netWorkingDataSource: Network(), locaDataSource: RecipeRepo.instance) // ok
     setupBindingDataToVC()
-
+    viewModel.loadAllFavRecipes()
     changeColor1()
-
 
   }
 
@@ -65,6 +64,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     }
   }
+
 
   private func setLoading(isLoading: Bool) {
     if isLoading {
@@ -86,6 +86,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
   }
 
+
+
   func setupIndicator(){
     indicator = UIActivityIndicatorView(style: .large)
     indicator.center = self.view.center
@@ -104,12 +106,33 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     let cell = tableView.dequeueReusableCell(withIdentifier: "recipecell", for: indexPath) as! RecipeCell
 
     result = viewModel.result?[indexPath.row]
-    cell.lblChefName.text = result?.credits?[0].name
-    cell.lblRecipeName.text = result?.slug?.replacingOccurrences(of: "-", with: " ")
-    cell.lblServings.text = "\(result?.numServings ?? 0)"
-    cell.lblFoodType.text = result?.show?.name
+
+    //    cell.lblChefName.text = result?.credits?[0].name
+    //    cell.lblRecipeName.text = result?.slug?.replacingOccurrences(of: "-", with: " ")
+    //    cell.lblServings.text = "\(result?.numServings ?? 0)"
+    //    cell.lblFoodType.text = result?.show?.name
+
+    cell.setupCell(item: result!)
+
+    if viewModel.checkIsItemInFav(id: result?.id ?? -1){
+      cell.setFavUI(isFav: true)
+
+      //          cell.isFav = true
+      //          cell.FavIconButton.setImage(UIImage(systemName: FavIcon), for: .normal)
+    } else {
+      cell.setFavUI(isFav: false)
+      // cell.FavIconButton.setImage(UIImage(systemName: notFavIcon), for: .normal)
+    }
+    //
+    //      cell.bindResultToView {
+    //
+    //      }
 
     return cell
+  }
+
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return CGFloat(CellConstants.CELL_HEIGHT)
   }
 
 
@@ -146,8 +169,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     popularView.backgroundColor = UIColor(named: orangeColor)
     getItemsAfterCheckingConnection(categoryName: popular)
   }
-
-
 
   @objc func changeColor2(){
     resetAllColors()
