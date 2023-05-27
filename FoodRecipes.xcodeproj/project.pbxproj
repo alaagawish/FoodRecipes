@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		043F50A02A20E8A800F502FB /* FavStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043F509F2A20E8A800F502FB /* FavStoryboard.storyboard */; };
-		0489E4522A209FC100D72497 /* recipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489E4502A209FC100D72497 /* recipeCell.swift */; };
+		0489E4522A209FC100D72497 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489E4502A209FC100D72497 /* RecipeCell.swift */; };
 		0489E4532A209FC100D72497 /* recipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0489E4512A209FC100D72497 /* recipeCell.xib */; };
 		04989CB52A20AEDE00BC9D05 /* ViewUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04989CB42A20AEDE00BC9D05 /* ViewUtilities.swift */; };
 		04D260FA2A20F188009423B7 /* FavModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D260F92A20F188009423B7 /* FavModel.swift */; };
@@ -73,7 +73,7 @@
 
 /* Begin PBXFileReference section */
 		043F509F2A20E8A800F502FB /* FavStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavStoryboard.storyboard; sourceTree = "<group>"; };
-		0489E4502A209FC100D72497 /* recipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeCell.swift; sourceTree = "<group>"; };
+		0489E4502A209FC100D72497 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		0489E4512A209FC100D72497 /* recipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = recipeCell.xib; sourceTree = "<group>"; };
 		04989CB42A20AEDE00BC9D05 /* ViewUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtilities.swift; sourceTree = "<group>"; };
 		04D260F92A20F188009423B7 /* FavModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavModel.swift; sourceTree = "<group>"; };
@@ -264,7 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				615949562A2033BA00C4FC4C /* Main.storyboard */,
-				0489E4502A209FC100D72497 /* recipeCell.swift */,
+				0489E4502A209FC100D72497 /* RecipeCell.swift */,
 				0489E4512A209FC100D72497 /* recipeCell.xib */,
 			);
 			path = View;
@@ -579,7 +579,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				615949552A2033BA00C4FC4C /* ViewController.swift in Sources */,
-				0489E4522A209FC100D72497 /* recipeCell.swift in Sources */,
+				0489E4522A209FC100D72497 /* RecipeCell.swift in Sources */,
 				04D261002A210772009423B7 /* CoreDataConstants.swift in Sources */,
 				04D260FC2A20F1A0009423B7 /* FavViewModel.swift in Sources */,
 				04D260FE2A210271009423B7 /* LocolDatabaseProtocol.swift in Sources */,

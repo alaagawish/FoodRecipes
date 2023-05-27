@@ -65,12 +65,16 @@ class FavoriteViewController: UIViewController , UITableViewDelegate , UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "recipecell", for: indexPath) as! recipeCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "recipecell", for: indexPath) as! RecipeCell
         
         cell.ChefNameLabel.text = viewModel.allFavRecipes[indexPath.row].credits?[0].name
+        
         cell.RecipeNameLabel.text = viewModel.allFavRecipes[indexPath.row].slug
-        cell.FoodTypeLabel.text = viewModel.allFavRecipes[indexPath.row].yields
+        
+        cell.FoodTypeLabel.text = viewModel.allFavRecipes[indexPath.row].show?.name
+        
         cell.servingsLabel.text = "\(String(describing: viewModel.allFavRecipes[indexPath.row].numServings))"
+        
         ViewUtilities.downloadImageUsingKF(withUrl: viewModel.allFavRecipes[indexPath.row].thumbnailUrl ?? "", andPlaceholder: CoreDataConstants.RECIPE_Placeholder, inSize: CGSize(width: cell.RecipeImage.bounds.width - 5, height: cell.RecipeImage.bounds.height - 5), showIn: cell.RecipeImage)
       
         return cell
@@ -80,13 +84,12 @@ class FavoriteViewController: UIViewController , UITableViewDelegate , UITableVi
         
         if viewModel.checkInternetConnectivity(){
             //let detilsVc = storyboard?.instantiateViewController(withIdentifier: "cell") as! RecipeDetailsScreen
-            
+            let id = viewModel.allFavRecipes[indexPath.row].id
             //self.present(detilsVc, animated: true, completion: nil)
         }else{
             AlertType.noInternet.showAlert(in: self)
         }
         
-       
     }
  
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class recipeCell: UITableViewCell {
+class RecipeCell: UITableViewCell {
     @IBOutlet weak var RecipeImage: UIImageView!
     
     @IBOutlet weak var servingsLabel: UILabel!
