@@ -28,8 +28,6 @@ final class NetworkMockTests: XCTestCase {
     func testNetworkPass(){
         netorkMock = NetworkMock(isSuccess: true)
         netorkMock.getData(path: "", parameters: ["":""], handler: { result in
-         //   XCTAssertEqual(result?.count,10)
-           // XCTAssertNotNil(result?.count)
             XCTAssertNotNil(result)
         })
     

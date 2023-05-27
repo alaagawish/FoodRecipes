@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import FoodRecipes
+
 final class NetworkTests: XCTestCase {
     var network: NetworkProtocol!
     override func setUpWithError() throws {
@@ -23,7 +24,6 @@ final class NetworkTests: XCTestCase {
         let parameters = ["recipe_id": "4836"]
         let myExpectation = expectation(description: "network")
         network.getData(path: "list-similarities", parameters: parameters) { result in
-          //  print(result)
             guard result != nil else{
                 XCTFail()
                 myExpectation.fulfill()
