@@ -7,9 +7,9 @@
 
 import Foundation
 struct Section: Decodable{
-    let components: [Component]
+    let components: [Component]?
     let name: String?
-    let position: Int
+    let position: Int?
     
     private enum CodingKeys: String, CodingKey {
         case components = "components"

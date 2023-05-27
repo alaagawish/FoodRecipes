@@ -10,10 +10,10 @@ struct Ingredient: Codable {
     
     // let updatedAt: Int
     let name: String?
-    let createdAt: Int
-    let displayPlural: String
-    let id: Int
-    let displaySingular: String
+    let createdAt: Int?
+    let displayPlural: String?
+    let id: Int?
+    let displaySingular: String?
     
     private enum CodingKeys: String, CodingKey {
         //case updatedAt = "updated_at"

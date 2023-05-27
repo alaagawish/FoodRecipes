@@ -8,11 +8,11 @@
 import Foundation
 struct Unit: Decodable {
     
-    let system: String
+    let system: String?
     let name: String?
-    let displayPlural: String
-    let displaySingular: String
-    let abbreviation: String
+    let displayPlural: String?
+    let displaySingular: String?
+    let abbreviation: String?
     
     private enum CodingKeys: String, CodingKey {
         case system = "system"

@@ -7,3 +7,13 @@
 
 import Foundation
 let home = "HomeViewController"
+let grayColor = "grayBG"
+let orangeColor = "CategoryColor"
+let popular = "middle_eastern"
+let breakfast = "breakfast"
+let launch = "lunch"
+let dinner = "dinner"
+let dessert = "desserts"
+let gray53 = "gray53"
+let FavIcon = "fillFavIcon"
+let notFavIcon = "favicon"
