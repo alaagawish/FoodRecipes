@@ -34,7 +34,7 @@ class RecipeCell: UITableViewCell {
     }
     
     func setupCell(item : Result!) {
-        self.ChefNameLabel.text = "by " + (item.credits?[0].name)!
+        self.ChefNameLabel.text = "by " + (item.credits?[0].name ?? "")
         self.RecipeNameLabel.text = item.slug?.replacingOccurrences(of: "-", with: " ")
         self.servingsLabel.text = "\(item.numServings ?? 0)"
         self.FoodTypeLabel.text = item?.show?.name
