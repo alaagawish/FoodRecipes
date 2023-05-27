@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0489E4522A209FC100D72497 /* recipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489E4502A209FC100D72497 /* recipeCell.swift */; };
+		0489E4522A209FC100D72497 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489E4502A209FC100D72497 /* RecipeCell.swift */; };
 		0489E4532A209FC100D72497 /* recipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0489E4512A209FC100D72497 /* recipeCell.xib */; };
 		04989CB52A20AEDE00BC9D05 /* ViewUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04989CB42A20AEDE00BC9D05 /* ViewUtilities.swift */; };
 		2C38067A68D0ADD16A52E2EF /* Pods_FoodRecipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DE9C67666DF28BE73C819E /* Pods_FoodRecipes.framework */; };
@@ -48,7 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0489E4502A209FC100D72497 /* recipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeCell.swift; sourceTree = "<group>"; };
+		0489E4502A209FC100D72497 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		0489E4512A209FC100D72497 /* recipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = recipeCell.xib; sourceTree = "<group>"; };
 		04989CB42A20AEDE00BC9D05 /* ViewUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtilities.swift; sourceTree = "<group>"; };
 		14DE9C67666DF28BE73C819E /* Pods_FoodRecipes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodRecipes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				615949562A2033BA00C4FC4C /* Main.storyboard */,
-				0489E4502A209FC100D72497 /* recipeCell.swift */,
+				0489E4502A209FC100D72497 /* RecipeCell.swift */,
 				0489E4512A209FC100D72497 /* recipeCell.xib */,
 			);
 			path = View;
@@ -482,7 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				615949552A2033BA00C4FC4C /* ViewController.swift in Sources */,
-				0489E4522A209FC100D72497 /* recipeCell.swift in Sources */,
+				0489E4522A209FC100D72497 /* RecipeCell.swift in Sources */,
 				615949512A2033BA00C4FC4C /* AppDelegate.swift in Sources */,
 				617CBE5E2A209912005576C1 /* NetworkProtocol.swift in Sources */,
 				615949532A2033BA00C4FC4C /* SceneDelegate.swift in Sources */,
