@@ -6,23 +6,24 @@
 //
 
 import UIKit
-import Kingfisher
 
 class RecipeCell: UITableViewCell {
-    @IBOutlet weak var imgRecipe: UIImageView!
     
-    @IBOutlet weak var lblServings: UILabel!
-    @IBOutlet weak var btnFavIcon: UIButton!
-    @IBOutlet weak var lblChefName: UILabel!
-    @IBOutlet weak var lblRecipeName: UILabel!
+    @IBOutlet weak var gradImage: UIImageView!
+    @IBOutlet weak var RecipeImage: UIImageView!
+    @IBOutlet weak var servingsLabel: UILabel!
+    @IBOutlet weak var FavIconButton: UIButton!
+    @IBOutlet weak var ChefNameLabel: UILabel!
+    @IBOutlet weak var RecipeNameLabel: UILabel!
+    @IBOutlet weak var FoodTypeLabel: UILabel!
+    var bindResultToView : (()->()) = {}
     
-    @IBOutlet weak var lblFoodType: UILabel!
-    
-    var isFav = false
     override func awakeFromNib() {
         super.awakeFromNib()
-        ViewUtilities.setCornerRadius(view: btnFavIcon, radius: 2.5)
-      btnFavIcon.setTitle("", for: .normal)
+        ViewUtilities.setCornerRadius(view: FavIconButton, radius: 3.2)
+        ViewUtilities.setCornerRadius(view: RecipeImage, radius: 10)
+        ViewUtilities.setCornerRadius(view: gradImage, radius: 10)
+        FavIconButton.setTitle("", for: .normal)
         // Initializion code
     }
 
@@ -32,19 +33,31 @@ class RecipeCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setupCell(item : Result!) {
+        self.ChefNameLabel.text = "by " + (item.credits?[0].name)!
+        self.RecipeNameLabel.text = item.slug?.replacingOccurrences(of: "-", with: " ")
+        self.servingsLabel.text = "\(item.numServings ?? 0)"
+        self.FoodTypeLabel.text = item?.show?.name
+        ViewUtilities.downloadImageUsingKF(withUrl: item?.thumbnailUrl ?? "", andPlaceholder: CoreDataConstants.RECIPE_Placeholder, inSize: CGSize(width: self.bounds.width - 5, height:  self.bounds.height - 5), showIn: self.RecipeImage)
+    }
+    
+    
     @IBAction func btnFavAction(_ sender: Any) {
-
-    isFav.toggle()
-        if isFav{
-            if let image = UIImage(named: "fillFavIcon") {
-                btnFavIcon.setImage(image, for: .normal)
-            }
-        }else{
-            if let image = UIImage(named: "favicon") {
-                btnFavIcon.setImage(image, for: .normal)
-            }
-        }
         
+        bindResultToView()
+ 
+    }
+    
+    func setFavUI(isFav:Bool){
+        var image:UIImage!
+        if isFav{
+             image = UIImage(named: FavIcon)
+             FavIconButton.setImage(image, for: .normal)
+            
+        }else{
+             image = UIImage(named: notFavIcon)
+             FavIconButton.setImage(image, for: .normal)
+        }
     }
 
 
