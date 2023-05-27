@@ -68,7 +68,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     let cell = tableView.dequeueReusableCell(withIdentifier: "recipecell", for: indexPath) as! RecipeCell
     result = viewModel.result?[indexPath.row]
     cell.lblChefName.text = result?.credits?[0].name
-    cell.lblRecipeName.text = result?.slug?.replacing("-", with: " ")
+    cell.lblRecipeName.text = result?.slug?.replacingOccurrences(of: "-", with: " ")
     cell.lblServings.text = "\(result?.numServings ?? 0)"
     cell.lblFoodType.text = result?.show?.name
 
