@@ -200,4 +200,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     categoryView.backgroundColor = UIColor(named: grayColor)
   }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Details", bundle: nil)
+        
+        let recipeDetails = storyboard.instantiateViewController(withIdentifier: "recipeDetails") as! DetailsViewController
+        recipeDetails.modalPresentationStyle = .fullScreen
+      
+        recipeDetails.recipe = viewModel.result?[indexPath.row]
+
+        present(recipeDetails, animated: true)
+    }
 }

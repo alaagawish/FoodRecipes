@@ -10,11 +10,6 @@ import Foundation
 class MockApiFileLoader {
     
     func loadApiFiles() -> MyResponse? {
-        //        let paths = Bundle.main.paths(forResourcesOfType: "json", inDirectory: "")
-        //        let mockPath = paths.filter { $0.components(separatedBy: "/").last?.hasPrefix("Mock-response") == true }.first
-        //        guard let mockPath = mockPath else { return nil }
-        //        return generateModel(for: mockPath)
-        
         let bundle = Bundle(for: type(of: self))
         let fileUrl = bundle.url(forResource: "Mock-response", withExtension: "json")
         do {
