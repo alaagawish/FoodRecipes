@@ -25,24 +25,24 @@ class CoreDataLocalDataSource : LocalDataSource {
     
     
 
-    func loadDataFromDB() -> [Any] {
+    func loadDataFromDB() -> [Result] {
         
         
         
         let fetch = NSFetchRequest<NSManagedObject>(entityName: entityName)
         
-        var items = [Any]()
+        var items = [Result]()
         
         do{
             itemsNS = try contextManager.fetch(fetch)
             
             for item in itemsNS{
                 let recipeId = item.value(forKey: CoreDataConstants.RECIPE_Id) as? Int
-                let recipeServings = item.value(forKey: "recipeServings") as? Int
-                let recipeChef = item.value(forKey: "recipeChef") as? String
-                let recipeName = item.value(forKey: "recipeName") as? String
-                let recipeType = item.value(forKey: "recipeType") as? String
-                let recipeImage = item.value(forKey: "recipeImage") as? String
+                let recipeServings = item.value(forKey: CoreDataConstants.RECIPE_Servings) as? Int
+                let recipeChef = item.value(forKey: CoreDataConstants.RECIPE_Chef) as? String
+                let recipeName = item.value(forKey: CoreDataConstants.RECIPE_Name) as? String
+                let recipeType = item.value(forKey: CoreDataConstants.RECIPE_Type) as? String
+                let recipeImage = item.value(forKey: CoreDataConstants.RECIPE_Image) as? String
                 
                 items.append(item)
             }
@@ -57,22 +57,22 @@ class CoreDataLocalDataSource : LocalDataSource {
     
     
     
-    func insertItemToDatabase(item: Any) {
+    func insertItemToDatabase(item: Result) {
         let entity = NSEntityDescription.entity(forEntityName: entityName, in: contextManager)
         
         let itemEntity = NSManagedObject(entity: entity!, insertInto: contextManager)
         
-        itemEntity.setValue(item.recipeId, forKey: CoreDataConstants.RECIPE_Id)
-        itemEntity.setValue(item.recipeChef, forKey: CoreDataConstants.RECIPE_Chef)
-        itemEntity.setValue(item.recipeName, forKey: CoreDataConstants.RECIPE_Name)
-        itemEntity.setValue(item.recipeServings, forKey: CoreDataConstants.RECIPE_Servings)
-        itemEntity.setValue(item.recipeType, forKey: CoreDataConstants.RECIPE_Type)
-        itemEntity.setValue(item.recipeImage, forKey: CoreDataConstants.RECIPE_Image)
+        itemEntity.setValue(item.id, forKey: CoreDataConstants.RECIPE_Id)
+        itemEntity.setValue(item.credits?[0].name, forKey: CoreDataConstants.RECIPE_Chef)
+        itemEntity.setValue(item.slug, forKey: CoreDataConstants.RECIPE_Name)
+        itemEntity.setValue(item.numServings, forKey: CoreDataConstants.RECIPE_Servings)
+        itemEntity.setValue(item.yields, forKey: CoreDataConstants.RECIPE_Type)
+        itemEntity.setValue(item.thumbnailUrl, forKey: CoreDataConstants.RECIPE_Image)
         
         
         do{
             try contextManager.save()
-            print("The Items with id \(item.league_key!) added to fav successfully .")
+            print("The Items with id \(item.id) added to fav successfully .")
         }catch let e{
             print("Error when add item to fav  : \(e.localizedDescription)")
         }
@@ -113,3 +113,4 @@ class CoreDataLocalDataSource : LocalDataSource {
     
     
 }
+

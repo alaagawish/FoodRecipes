@@ -7,16 +7,35 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class ViewUtilities {
     
     static func setCornerRadius(view : UIView , radius: Float){
         view.contentMode = .scaleAspectFill
         view.layer.cornerRadius =   view.frame.size.height / CGFloat(radius)
-            view.layer.masksToBounds = true
+        view.layer.masksToBounds = true
     }
     
-    
+    static func downloadImageUsingKF(withUrl: String , andPlaceholder : String , inSize : CGSize , showIn : UIImageView!){
+        let imageUrl = URL(string: withUrl)
+        
+        let processor = DownsamplingImageProcessor(size: inSize ) |> RoundCornerImageProcessor(cornerRadius: 10)
+        showIn!.kf.indicatorType = .activity
+        
+        showIn!.kf.setImage(
+            with: imageUrl,
+            placeholder: UIImage(named: andPlaceholder)!,
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ])
+        
+        
+        
+    }
     
 }
 
@@ -74,6 +93,7 @@ enum AlertType {
             viewController.present(alertController, animated: true, completion: nil)
         }
 }
+
 
     
     

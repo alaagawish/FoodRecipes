@@ -8,58 +8,58 @@
 import Foundation
 struct Result: Decodable{
     let seoTitle: String?
-    let language: String
-    let price: Price
-    let slug: String
+    let language: String?
+    let price: Price?
+    let slug: String?
     //let brandId: Any
-    let numServings: Int
+    let numServings: Int?
     // let totalTimeTier: Any
-    let showId: Int
-    let show: Show
+    let showId: Int?
+    let show: Show?
     let renditions: [Rendition]?
-    let isShoppable: Bool
-    let canonicalId: String
+    let isShoppable: Bool?
+    let canonicalId: String?
     let keywords: String?
     //  let seoPath: Any
-    let aspectRatio: String
-    let thumbnailAltText: String
+    let aspectRatio: String?
+    let thumbnailAltText: String?
     //let videoUrl: Any
     //  let updatedAt: Int?
     // let beautyUrl: Any
-    let topics: [Topic]
+    let topics: [Topic]?
     //  let facebookPosts: [Any]
-    let servingsNounSingular: String
-    let tags: [Tag]
+    let servingsNounSingular: String?
+    let tags: [Tag]?
     let name: String?
     // let buzzId: Any
-    let thumbnailUrl: String
-    let promotion: String
-    let country: String
-    let sections: [Section]
+    let thumbnailUrl: String?
+    let promotion: String?
+    let country: String?
+    let sections: [Section]?
     //    let compilations: [Any]
-    let isOneTop: Bool
-    let yields: String
+    let isOneTop: Bool?
+    let yields: String?
     //  let originalVideoUrl: Any
-    let servingsNounPlural: String
-    let instructions: [Instruction]
-    let userRatings: UserRatings
-    let id: Int
-    let createdAt: Int
-    let description: String
+    let servingsNounPlural: String?
+    let instructions: [Instruction]?
+    let userRatings: UserRatings?
+    let id: Int?
+    let createdAt: Int?
+    let description: String?
     // let totalTimeMinutes: Any
-    let nutritionVisibility: String
-    let draftStatus: String
+    let nutritionVisibility: String?
+    let draftStatus: String?
     // let cookTimeMinutes: Any
-    let approvedAt: Int
+    let approvedAt: Int?
     //    let videoAdContent: Any
     //  let brand: Any
     // let prepTimeMinutes: Any
-    let nutrition: Nutrition
-    let tipsAndRatingsEnabled: Bool
+    let nutrition: Nutrition?
+    let tipsAndRatingsEnabled: Bool?
     // let inspiredByUrl: Any
-    let credits: [Credit]
+    let credits: [Credit]?
     // let videoId: Any
-    let similarity: Double
+    let similarity: Double?
     
     private enum CodingKeys: String, CodingKey {
         case seoTitle = "seo_title"

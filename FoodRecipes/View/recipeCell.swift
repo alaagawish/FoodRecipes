@@ -8,19 +8,19 @@
 import UIKit
 
 class recipeCell: UITableViewCell {
-    @IBOutlet weak var imgRecipe: UIImageView!
+    @IBOutlet weak var RecipeImage: UIImageView!
     
-    @IBOutlet weak var lblServings: UILabel!
-    @IBOutlet weak var btnFavIcon: UIButton!
-    @IBOutlet weak var lblChefName: UILabel!
-    @IBOutlet weak var lblRecipeName: UILabel!
+    @IBOutlet weak var servingsLabel: UILabel!
+    @IBOutlet weak var FavIconButton: UIButton!
+    @IBOutlet weak var ChefNameLabel: UILabel!
+    @IBOutlet weak var RecipeNameLabel: UILabel!
     
-    @IBOutlet weak var lblFoodType: UILabel!
+    @IBOutlet weak var FoodTypeLabel: UILabel!
     
     var isFav = false
     override func awakeFromNib() {
         super.awakeFromNib()
-        ViewUtilities.setCornerRadius(view: btnFavIcon, radius: 3.2)
+        ViewUtilities.setCornerRadius(view: FavIconButton, radius: 3.2)
         // Initializion code
     }
 
@@ -33,11 +33,11 @@ class recipeCell: UITableViewCell {
     @IBAction func btnFavAction(_ sender: Any) {
         if isFav{
             if let image = UIImage(named: "fillFavIcon") {
-                btnFavIcon.setImage(image, for: .normal)
+                FavIconButton.setImage(image, for: .normal)
             }
         }else{
             if let image = UIImage(named: "favicon") {
-                btnFavIcon.setImage(image, for: .normal)
+                FavIconButton.setImage(image, for: .normal)
             }
         }
         isFav.toggle()

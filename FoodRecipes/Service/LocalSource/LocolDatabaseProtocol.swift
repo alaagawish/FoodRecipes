@@ -8,8 +8,8 @@
 import Foundation
 protocol LocalDataSource {
     
-    func insertItemToDatabase(item: Any)
+    func insertItemToDatabase(item: Result)
     func removeItemFromDatabase(id : Int)
-    func loadDataFromDB() -> [Any]
+    func loadDataFromDB() -> [Result]
     func deleteAllData()
 }

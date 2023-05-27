@@ -7,9 +7,42 @@
 
 import Foundation
 
-class FavViewModel{
+class FavouriteViewModel{
+    
+    var bindResultToView : (()->()) = {}
+    
+    var allFavRecipes : [Result] = [] {
+        didSet{
+            DispatchQueue.main.async {
+                self.bindResultToView()
+            }
+        }
+    }
+    
+    var databaseInstance : LocalDataSource
+    
+    init(databaseInstance: CoreDataLocalDataSource) {
+        
+        self.databaseInstance = databaseInstance
+    }
+    
+    func loadCachingData(){
+        
+        self.allFavRecipes = databaseInstance.loadDataFromDB()
+    }
+    
+    func deleteFavItem(itemKey : Int){
+        
+        self.databaseInstance.removeItemFromDatabase(id: itemKey)
+        
+        self.loadCachingData()
+    }
     
     
+    func checkInternetConnectivity()->Bool{
+        
+        return Connectivity.sharedInstance.isConnectedToInternet()
+    }
     
     
 }
