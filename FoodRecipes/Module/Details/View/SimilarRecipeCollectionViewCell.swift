@@ -28,6 +28,6 @@ class SimilarRecipeCollectionViewCell: UICollectionViewCell {
         
         
        // self.recipeImg.kf.setImage(with: recipe.thumbnailUrl,
-                             placeholder: UIImage(named: "noImg"))
+//                             placeholder: UIImage(named: "noImg"))
     }
 }
