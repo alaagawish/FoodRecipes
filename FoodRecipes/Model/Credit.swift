@@ -9,7 +9,7 @@ import Foundation
 struct Credit: Decodable{
     
     let name: String?
-    let type: String
+    let type: String?
     
     private enum CodingKeys: String, CodingKey {
         case name = "name"

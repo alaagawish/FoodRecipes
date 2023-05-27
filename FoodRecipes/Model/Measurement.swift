@@ -9,9 +9,9 @@ import Foundation
 
 struct Measurement: Decodable {
     
-    let unit: Unit
-    let quantity: String
-    let id: Int
+    let unit: Unit?
+    let quantity: String?
+    let id: Int?
     
     private enum CodingKeys: String, CodingKey {
         case unit = "unit"

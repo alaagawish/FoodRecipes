@@ -8,12 +8,12 @@
 import Foundation
 struct Instruction: Decodable{
     // let appliance: Any
-    let endTime: Int
+    let endTime: Int?
     // let temperature: Any
-    let id: Int
-    let position: Int
-    let displayText: String
-    let startTime: Int
+    let id: Int?
+    let position: Int?
+    let displayText: String?
+    let startTime: Int?
     
     private enum CodingKeys: String, CodingKey {
         //  case appliance = "appliance"

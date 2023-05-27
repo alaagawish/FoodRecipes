@@ -8,18 +8,22 @@
 import Foundation
 struct Result: Decodable{
     let seoTitle: String?
+<
     let language: String?
+
+
     let price: Price?
     let slug: String?
     //let brandId: Any
     let numServings: Int?
-    // let totalTimeTier: Any?
+
     let showId: Int?
     let show: Show?
     let renditions: [Rendition]?
     let isShoppable: Bool?
     let canonicalId: String?
     let keywords: String?
+
     //  let seoPath: Any?
     let aspectRatio: String?
     let thumbnailAltText: String?
@@ -32,20 +36,24 @@ struct Result: Decodable{
     let tags: [Tag]?
     let name: String?
     // let buzzId: Any?
+
     let thumbnailUrl: String?
     let promotion: String?
     let country: String?
     let sections: [Section]?
+
     //    let compilations: [Any]?
     let isOneTop: Bool?
     let yields: String?
     //  let originalVideoUrl: Any?
+
     let servingsNounPlural: String?
     let instructions: [Instruction]?
     let userRatings: UserRatings?
     let id: Int?
     let createdAt: Int?
     let description: String?
+
     // let totalTimeMinutes: Any?
     let nutritionVisibility: String?
     let draftStatus: String?
@@ -59,6 +67,7 @@ struct Result: Decodable{
     // let inspiredByUrl: Any?
     let credits: [Credit]?
     // let videoId: Any?
+
     let similarity: Double?
     
     private enum CodingKeys: String, CodingKey {
