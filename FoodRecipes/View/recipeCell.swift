@@ -6,9 +6,9 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RecipeCell: UITableViewCell {
-    
     @IBOutlet weak var gradImage: UIImageView!
     @IBOutlet weak var RecipeImage: UIImageView!
     @IBOutlet weak var servingsLabel: UILabel!
@@ -17,7 +17,7 @@ class RecipeCell: UITableViewCell {
     @IBOutlet weak var RecipeNameLabel: UILabel!
     @IBOutlet weak var FoodTypeLabel: UILabel!
     var bindResultToView : (()->()) = {}
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         ViewUtilities.setCornerRadius(view: FavIconButton, radius: 3.2)
