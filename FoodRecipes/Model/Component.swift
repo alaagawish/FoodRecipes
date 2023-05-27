@@ -7,12 +7,12 @@
 
 import Foundation
 struct Component: Decodable{
-    let rawText: String
-    let extraComment: String
-    let ingredient: Ingredient
-    let id: Int
-    let position: Int
-    let measurements: [Measurement]
+    let rawText: String?
+    let extraComment: String?
+    let ingredient: Ingredient?
+    let id: Int?
+    let position: Int?
+    let measurements: [Measurement]?
     
     private enum CodingKeys: String, CodingKey {
         case rawText = "raw_text"

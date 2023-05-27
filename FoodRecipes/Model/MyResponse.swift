@@ -10,7 +10,7 @@ import Foundation
 struct MyResponse: Decodable {
     
     let count: Int
-    let results: [Result]
+    let results: [Result]?
     
     private enum CodingKeys: String, CodingKey {
         case count = "count"
