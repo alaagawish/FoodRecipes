@@ -22,6 +22,7 @@ class RecipeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         ViewUtilities.setCornerRadius(view: btnFavIcon, radius: 2.5)
+      btnFavIcon.setTitle("", for: .normal)
         // Initializion code
     }
 
