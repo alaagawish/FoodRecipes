@@ -14,19 +14,17 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="FavoriteViewController" customModule="FoodRecipes" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8ue-aC-ytk">
-                                <rect key="frame" x="3.3333333333333428" y="106" width="371.66666666666663" height="737"/>
+                                <rect key="frame" x="3.3333333333333428" y="106" width="371.66666666666663" height="706"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="737" id="QA6-Fi-YvJ"/>
-                                </constraints>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="no favourite place holder" translatesAutoresizingMaskIntoConstraints="NO" id="1a5-BA-CMN">
-                                <rect key="frame" x="54" y="256" width="267" height="301"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="no favourite place holder" translatesAutoresizingMaskIntoConstraints="NO" id="1a5-BA-CMN">
+                                <rect key="frame" x="54" y="255" width="267" height="316"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eob-QX-CId">
                                 <rect key="frame" x="140" y="58.000000000000007" width="112.33333333333331" height="26.333333333333336"/>
@@ -41,14 +39,14 @@
                             <constraint firstItem="eob-QX-CId" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="Bwn-dj-nsy"/>
                             <constraint firstAttribute="bottom" secondItem="8ue-aC-ytk" secondAttribute="bottom" id="CLS-iv-tr6"/>
                             <constraint firstItem="eob-QX-CId" firstAttribute="centerX" secondItem="8ue-aC-ytk" secondAttribute="centerX" constant="7" id="Ko3-Yy-bvB"/>
-                            <constraint firstItem="1a5-BA-CMN" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="aDS-wi-PdA"/>
                             <constraint firstItem="8ue-aC-ytk" firstAttribute="top" secondItem="eob-QX-CId" secondAttribute="bottom" constant="21.666666666666671" id="g1U-Bv-yys"/>
-                            <constraint firstItem="1a5-BA-CMN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gQB-kn-2t4"/>
                             <constraint firstAttribute="trailing" secondItem="8ue-aC-ytk" secondAttribute="trailing" id="kKM-OL-3AS"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="eob-QX-CId" secondAttribute="trailing" constant="126" id="t9G-Fx-TOX"/>
                             <constraint firstItem="eob-QX-CId" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="140" id="zl9-G7-r3N"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="favorite" id="zs1-O7-J66"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="FavTableView" destination="8ue-aC-ytk" id="IJN-oh-DnE"/>
                         <outlet property="imgNoImage" destination="1a5-BA-CMN" id="XYQ-K9-tWr"/>
@@ -60,6 +58,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="favorite" width="38" height="34"/>
         <image name="no favourite place holder" width="267" height="316"/>
         <namedColor name="favTitleColor">
             <color red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
