@@ -25,7 +25,7 @@ class SimilarRecipeCollectionViewCell: UICollectionViewCell {
         self.nameLabel.text = recipe.slug?.replacingOccurrences(of: "-", with: " ")
         self.serving.text = "\(recipe.numServings ?? 0)"
         self.foodType.text = recipe.show?.name
-        
+        ViewUtilities.downloadImageUsingKF(withUrl: recipe.thumbnailUrl ?? CoreDataConstants.RECIPE_Placeholder , andPlaceholder: CoreDataConstants.RECIPE_Placeholder , inSize: CGSize(width: 100, height: 100), showIn: recipeImg)
         
        // self.recipeImg.kf.setImage(with: recipe.thumbnailUrl,
 //                             placeholder: UIImage(named: "noImg"))

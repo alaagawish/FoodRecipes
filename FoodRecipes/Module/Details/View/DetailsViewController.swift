@@ -25,6 +25,7 @@ class DetailsViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         detailsVM.bindRecipeDetails = {[weak self] in
             self?.similars = self?.detailsVM.similarRecipe ?? []
+            self?.detailsCollectionView.reloadData()
         }
         detailsVM.getRecipeDetails(id: recipe.id ?? 0)
         detailsVM.getSimilarRecipe(id: recipe.id ?? 0)
@@ -67,6 +68,8 @@ class DetailsViewController: UIViewController, UICollectionViewDelegate, UIColle
             
         }else if indexPath.section == 3 {
             let    cell = collectionView.dequeueReusableCell(withReuseIdentifier: "similarCell", for: indexPath) as! SimilarRecipeCollectionViewCell
+            
+            cell.setDetails(recipe: recipe)
             return cell
         }
         
@@ -81,7 +84,7 @@ class DetailsViewController: UIViewController, UICollectionViewDelegate, UIColle
         }else if section == 2 {
             return instructions.count
         }else if section == 3 {
-            return 20
+            return similars.count
         }
         return 0
     }
@@ -159,11 +162,7 @@ extension DetailsViewController{
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
         section.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0)
-        
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(25))
-        let headerSupplementary = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
-        
-        section.boundarySupplementaryItems = [headerSupplementary]
+    
         return section
     }
     
@@ -203,7 +202,7 @@ extension DetailsViewController{
                 item.transform = CGAffineTransform(scaleX: scale, y: scale)
             }
         }
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(30)) // Set the header size
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(30))
         let headerSupplementary = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
         
         section.boundarySupplementaryItems = [headerSupplementary]
