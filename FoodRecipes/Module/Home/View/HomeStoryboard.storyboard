@@ -13,7 +13,7 @@
         <!--Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="FoodRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="HomeViewController" customModule="FoodRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,10 +245,20 @@
             </objects>
             <point key="canvasLocation" x="980.91603053435108" y="-34.507042253521128"/>
         </scene>
+        <!--FavStoryboard-->
+        <scene sceneID="S5m-IS-kA6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FavStoryboard" id="kbb-zz-2Bx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="PAQ-Rp-ILY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wvh-48-0tn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685" y="400"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mZC-Ta-L63">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="A36-by-dRJ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="A36-by-dRJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fpq-tH-qVW">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -258,6 +268,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="afo-X5-rAj"/>
+                        <segue destination="kbb-zz-2Bx" kind="relationship" relationship="viewControllers" id="X6b-vw-cz3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNI-Lw-TN3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

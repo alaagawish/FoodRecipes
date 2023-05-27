@@ -11,7 +11,7 @@ import Alamofire
 class Network: NetworkProtocol{
     func getData(path: String, parameters: Alamofire.Parameters, handler: @escaping (MyResponse?) -> Void) {
         let headers: HTTPHeaders = [
-            "X-RapidAPI-Key": "f19eff2b6cmshcbd9953ada37654p1aa2f9jsn1ad2933620b1",
+            "X-RapidAPI-Key": "0264cbf91bmsh7e61711554b7b6fp107e57jsn8d79ba4e5c1c",
             "X-RapidAPI-Host": "tasty.p.rapidapi.com"
         ]
         
