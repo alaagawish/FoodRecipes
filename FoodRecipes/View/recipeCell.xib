@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -94,7 +95,6 @@
                         <color key="backgroundColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nfH-II-2Z4" secondAttribute="trailing" id="1BS-nh-oRb"/>
-                            <constraint firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="2Lb-6n-v2l"/>
                             <constraint firstAttribute="bottom" secondItem="nfH-II-2Z4" secondAttribute="bottom" id="87O-TQ-He2"/>
                             <constraint firstAttribute="trailing" secondItem="v9e-pD-96g" secondAttribute="trailing" id="F4x-Du-6eP"/>
                             <constraint firstItem="nfH-II-2Z4" firstAttribute="top" secondItem="Ikm-wj-nqJ" secondAttribute="bottom" constant="8" id="IFX-bG-xmH"/>
@@ -104,6 +104,7 @@
                             <constraint firstItem="Ikm-wj-nqJ" firstAttribute="leading" secondItem="v9e-pD-96g" secondAttribute="leading" id="ORa-lQ-VYY"/>
                             <constraint firstItem="JJc-2o-sEi" firstAttribute="top" secondItem="v9e-pD-96g" secondAttribute="bottom" constant="5.6699999999999999" id="PxS-VV-H1Z"/>
                             <constraint firstAttribute="trailing" secondItem="JJc-2o-sEi" secondAttribute="trailing" id="ZL0-hV-Rf7"/>
+                            <constraint firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="d4k-3v-N4b"/>
                             <constraint firstItem="JJc-2o-sEi" firstAttribute="leading" secondItem="v9e-pD-96g" secondAttribute="leading" id="eVe-ie-bC9"/>
                             <constraint firstAttribute="trailing" secondItem="Ikm-wj-nqJ" secondAttribute="trailing" id="hAb-bY-gRb"/>
                             <constraint firstItem="nfH-II-2Z4" firstAttribute="leading" secondItem="v9e-pD-96g" secondAttribute="leading" id="iSG-Tm-F3d"/>
