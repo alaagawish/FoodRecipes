@@ -37,8 +37,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     homeTableView.register(cellNib, forCellReuseIdentifier: "recipecell")
 
     setupIndicator()
-    viewModel = HomeViewModel()
-
+      viewModel = HomeViewModel(netWorkingDataSource: Network(), locaDataSource: RecipeRepo.instance)
+      viewModel.loadAllFavRecipes()
     viewModel.getItems(categoryName: "breakfast")
     viewModel.bindResultToViewController = {[weak self] in
       DispatchQueue.main.async {
@@ -47,6 +47,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
       }
     }
   }
+    
+    
 
   func setupIndicator(){
     indicator = UIActivityIndicatorView(style: .large)
@@ -67,30 +69,30 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "recipecell", for: indexPath) as! RecipeCell
     result = viewModel.result?[indexPath.row]
-    cell.lblChefName.text = result?.credits?[0].name
-    cell.lblRecipeName.text = result?.slug?.replacingOccurrences(of: "-", with: " ")
-    cell.lblServings.text = "\(result?.numServings ?? 0)"
-    cell.lblFoodType.text = result?.show?.name
-
-//    var imgUrl = result?.thumbnailUrl
-//    let processor = DownsamplingImageProcessor(size: cell.imgRecipe.bounds.size)
-//    |> RoundCornerImageProcessor(cornerRadius: (cell.imgRecipe.bounds.size.width)/2)
-
-//    cell.imgRecipe.kf.setImage(
-//      with: imgUrl,
-//      placeholder: UIImage(named: "recipe"),
-//      options: [
-//          .processor(processor),
-//          .scaleFactor(UIScreen.main.scale),
-//          .transition(.fade(1)),
-//          .cacheOriginalImage
-//      ])
-    
-//    cell.imgRecipe.kf.setImage(with: imgUrl, placeholder: UIImage(named: "recipe"))
-
+      cell.setupCell(item: result!)
+      
+      if viewModel.checkIsItemInFav(id: result?.id ?? -1){
+          cell.setFavUI(isFav: true)
+         
+//          cell.isFav = true
+//          cell.FavIconButton.setImage(UIImage(systemName: FavIcon), for: .normal)
+      } else {
+          cell.setFavUI(isFav: false)
+         // cell.FavIconButton.setImage(UIImage(systemName: notFavIcon), for: .normal)
+      }
+//      
+//      cell.bindResultToView {
+//          
+//      }
+      
+     
 
     return cell
   }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(CellConstants.CELL_HEIGHT)
+    }
 
 
   func addGestures(){

@@ -12,7 +12,11 @@ class LaunchScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-            self.performSegue(withIdentifier: home, sender: nil)
+            
+            let storyboard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+            let nav = storyboard.instantiateViewController(withIdentifier: home) 
+             nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: true, completion: nil)
         }
     }
     
