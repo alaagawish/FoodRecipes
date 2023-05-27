@@ -29,6 +29,7 @@ final class NetworkMockTests: XCTestCase {
         netorkMock = NetworkMock(isSuccess: true)
         netorkMock.getData(path: "", parameters: ["":""], handler: { result in
             XCTAssertEqual(result?.count,10)
+            XCTAssertNotNil(result?.count)
         })
     
     }
