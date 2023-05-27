@@ -5,7 +5,7 @@
         <attribute name="recipeId" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="recipeImage" optional="YES" attributeType="String"/>
         <attribute name="recipeName" optional="YES" attributeType="String"/>
-        <attribute name="recipeServings" optional="YES" attributeType="String"/>
+        <attribute name="recipeServings" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="recipeType" optional="YES" attributeType="String"/>
     </entity>
 </model>

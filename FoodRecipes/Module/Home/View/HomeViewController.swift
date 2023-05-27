@@ -38,7 +38,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     setupIndicator()
       viewModel = HomeViewModel(netWorkingDataSource: Network(), locaDataSource: RecipeRepo.instance)
-      viewModel.loadAllFavRecipes()
+     //viewModel.loadAllFavRecipes()
     viewModel.getItems(categoryName: "breakfast")
     viewModel.bindResultToViewController = {[weak self] in
       DispatchQueue.main.async {
@@ -73,19 +73,25 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
       
       if viewModel.checkIsItemInFav(id: result?.id ?? -1){
           cell.setFavUI(isFav: true)
-         
-//          cell.isFav = true
-//          cell.FavIconButton.setImage(UIImage(systemName: FavIcon), for: .normal)
+
       } else {
           cell.setFavUI(isFav: false)
-         // cell.FavIconButton.setImage(UIImage(systemName: notFavIcon), for: .normal)
       }
-//      
-//      cell.bindResultToView {
-//          
-//      }
       
-     
+      cell.bindResultToView = { [weak self] in
+          
+          if ((self?.viewModel.checkIsItemInFav(id: self?.result?.id ?? -1)) == true){
+              AlertType.confirmRemove(deleteHandler: {
+                  self?.viewModel.removeFavItem(id: self?.result?.id ?? -1)
+                  cell.setFavUI(isFav: true)
+              }).showAlert(in: self!)
+             
+          }else{
+              self?.viewModel.addToFav(item: (self?.result!)!)
+              cell.setFavUI(isFav: false)
+          }
+          
+      }
 
     return cell
   }

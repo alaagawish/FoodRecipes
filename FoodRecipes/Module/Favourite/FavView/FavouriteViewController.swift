@@ -67,6 +67,8 @@ class FavoriteViewController: UIViewController , UITableViewDelegate , UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recipecell", for: indexPath) as! RecipeCell
         
+        cell.setFavUI(isFav: true)
+        
         cell.ChefNameLabel.text = viewModel.allFavRecipes[indexPath.row].recipeName
         
         cell.RecipeNameLabel.text = viewModel.allFavRecipes[indexPath.row].recipeName
@@ -76,6 +78,13 @@ class FavoriteViewController: UIViewController , UITableViewDelegate , UITableVi
         cell.servingsLabel.text = "\(String(describing: viewModel.allFavRecipes[indexPath.row].recipeServings))"
         
         ViewUtilities.downloadImageUsingKF(withUrl: viewModel.allFavRecipes[indexPath.row].recipeImage ?? "", andPlaceholder: CoreDataConstants.RECIPE_Placeholder, inSize: CGSize(width: cell.RecipeImage.bounds.width - 5, height: cell.RecipeImage.bounds.height - 5), showIn: cell.RecipeImage)
+        
+        cell.bindResultToView = { [weak self] in
+            AlertType.confirmRemove(deleteHandler: {
+                self?.viewModel.deleteFavItem(itemKey: self?.viewModel.allFavRecipes[indexPath.row].recipeId ?? -1)
+            }).showAlert(in: self!)
+        }
+        
       
         return cell
     }
@@ -90,6 +99,9 @@ class FavoriteViewController: UIViewController , UITableViewDelegate , UITableVi
             AlertType.noInternet.showAlert(in: self)
         }
         
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(CellConstants.CELL_HEIGHT)
     }
  
 

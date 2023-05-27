@@ -11,6 +11,7 @@ struct Result: Decodable{
     let language: String?
     let price: Price?
     let slug: String?
+    var isFav: Bool?
     //let brandId: Any
     let numServings: Int?
     

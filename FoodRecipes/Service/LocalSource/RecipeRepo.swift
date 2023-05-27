@@ -64,7 +64,7 @@ class RecipeRepo : LocalDataSource {
     func removeItemFromDatabase(id: Int) {
         let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         
-        fetch.predicate = NSPredicate(format: "recipe_id == %d", id)
+        fetch.predicate = NSPredicate(format: "\(CoreDataConstants.RECIPE_Id) == %d", id)
         
         do {
             let fetchResults = try contextManager.fetch(fetch) as? [NSManagedObject]

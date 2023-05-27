@@ -6,9 +6,9 @@
 //
 
 import UIKit
-import Kingfisher
 
 class RecipeCell: UITableViewCell {
+    
     @IBOutlet weak var gradImage: UIImageView!
     @IBOutlet weak var RecipeImage: UIImageView!
     @IBOutlet weak var servingsLabel: UILabel!
@@ -16,10 +16,11 @@ class RecipeCell: UITableViewCell {
     @IBOutlet weak var ChefNameLabel: UILabel!
     @IBOutlet weak var RecipeNameLabel: UILabel!
     @IBOutlet weak var FoodTypeLabel: UILabel!
-    var bindResultToView : (()->()) = {}
-
+    var bindResultToView : ()->() = {}
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        bindResultToView = {}
         ViewUtilities.setCornerRadius(view: FavIconButton, radius: 3.2)
         ViewUtilities.setCornerRadius(view: RecipeImage, radius: 10)
         ViewUtilities.setCornerRadius(view: gradImage, radius: 10)
@@ -34,17 +35,18 @@ class RecipeCell: UITableViewCell {
     }
     
     func setupCell(item : Result!) {
-        self.ChefNameLabel.text = "by " + (item.credits?[0].name)!
+        self.ChefNameLabel.text = "by " + (item.credits?[0].name ?? "")
         self.RecipeNameLabel.text = item.slug?.replacingOccurrences(of: "-", with: " ")
         self.servingsLabel.text = "\(item.numServings ?? 0)"
         self.FoodTypeLabel.text = item?.show?.name
         ViewUtilities.downloadImageUsingKF(withUrl: item?.thumbnailUrl ?? "", andPlaceholder: CoreDataConstants.RECIPE_Placeholder, inSize: CGSize(width: self.bounds.width - 5, height:  self.bounds.height - 5), showIn: self.RecipeImage)
+        
     }
     
     
     @IBAction func btnFavAction(_ sender: Any) {
         
-        bindResultToView()
+        self.bindResultToView()
  
     }
     
@@ -58,6 +60,7 @@ class RecipeCell: UITableViewCell {
              image = UIImage(named: notFavIcon)
              FavIconButton.setImage(image, for: .normal)
         }
+       
     }
 
 
