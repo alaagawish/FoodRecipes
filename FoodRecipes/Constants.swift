@@ -6,4 +6,4 @@
 //
 
 import Foundation
-let home = "Home"
+let home = "HomeViewController"

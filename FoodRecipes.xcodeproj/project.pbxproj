@@ -16,6 +16,7 @@
 		04D260FE2A210271009423B7 /* LocolDatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D260FD2A210271009423B7 /* LocolDatabaseProtocol.swift */; };
 		04D261002A210772009423B7 /* CoreDataConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D260FF2A210772009423B7 /* CoreDataConstants.swift */; };
 		04D261052A21B8B7009423B7 /* internetConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D261042A21B8B7009423B7 /* internetConnectivity.swift */; };
+		04D261082A2203B9009423B7 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D261072A2203B9009423B7 /* LaunchScreenViewController.swift */; };
 		2C38067A68D0ADD16A52E2EF /* Pods_FoodRecipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DE9C67666DF28BE73C819E /* Pods_FoodRecipes.framework */; };
 		61558E7D2A20CABE00D13E55 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61558E7C2A20CABE00D13E55 /* Component.swift */; };
 		61558E7F2A20CAF300D13E55 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61558E7E2A20CAF300D13E55 /* Instruction.swift */; };
@@ -48,9 +49,9 @@
 		617CBE602A20996E005576C1 /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617CBE5F2A20996E005576C1 /* Credit.swift */; };
 		617CBE682A2099BD005576C1 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617CBE672A2099BD005576C1 /* FavouriteViewController.swift */; };
 		617CBE6A2A2099C9005576C1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617CBE692A2099C9005576C1 /* HomeViewController.swift */; };
+		6180F2F32A21ABCB00B9AA7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6180F2F22A21ABCB00B9AA7A /* Constants.swift */; };
 		9F1A19AC2A209F1A00B7767B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A19AB2A209F1A00B7767B /* HomeViewModel.swift */; };
 		9F1A19AE2A209F8100B7767B /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F1A19AD2A209F8100B7767B /* HomeStoryboard.storyboard */; };
-		6180F2F32A21ABCB00B9AA7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6180F2F22A21ABCB00B9AA7A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		04D260FD2A210271009423B7 /* LocolDatabaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocolDatabaseProtocol.swift; sourceTree = "<group>"; };
 		04D260FF2A210772009423B7 /* CoreDataConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataConstants.swift; sourceTree = "<group>"; };
 		04D261042A21B8B7009423B7 /* internetConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = internetConnectivity.swift; sourceTree = "<group>"; };
+		04D261072A2203B9009423B7 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		14DE9C67666DF28BE73C819E /* Pods_FoodRecipes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodRecipes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61558E7C2A20CABE00D13E55 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		61558E7E2A20CAF300D13E55 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
@@ -218,7 +220,7 @@
 		61558E5E2A209FE800D13E55 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				61558E622A20A01D00D13E55 /* LaunchScreenViewController.swift */,
+				04D261072A2203B9009423B7 /* LaunchScreenViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -599,7 +601,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				615949552A2033BA00C4FC4C /* ViewController.swift in Sources */,
+				04D261082A2203B9009423B7 /* LaunchScreenViewController.swift in Sources */,
 				0489E4522A209FC100D72497 /* RecipeCell.swift in Sources */,
 				04D261002A210772009423B7 /* CoreDataConstants.swift in Sources */,
 				04D260FC2A20F1A0009423B7 /* FavViewModel.swift in Sources */,
@@ -637,7 +639,7 @@
 				61558E9F2A20E04B00D13E55 /* Recipe.swift in Sources */,
 				617CBE5C2A2098D9005576C1 /* RecipeRepo.swift in Sources */,
 				61558E7D2A20CABE00D13E55 /* Component.swift in Sources */,
-				617CBE5C2A2098D9005576C1 /* DatabaseProtocol.swift in Sources */,
+				617CBE5C2A2098D9005576C1 /* RecipeRepo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
