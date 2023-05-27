@@ -6,4 +6,4 @@
 //
 
 import Foundation
-let home = "hom"
+let home = "Home"
