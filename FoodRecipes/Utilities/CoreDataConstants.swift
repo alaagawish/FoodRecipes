@@ -16,6 +16,7 @@ struct CoreDataConstants {
     static let RECIPE_Type = "recipeType"
     static let RECIPE_Image = "recipeImage"
     static let RECIPE_Placeholder = "placeholder"
+    static let RECIPE_ENTITY_NAME = "RecipeItemEntity"
     
     
 }

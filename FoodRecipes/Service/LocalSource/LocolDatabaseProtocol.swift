@@ -10,6 +10,7 @@ protocol LocalDataSource {
     
     func insertItemToDatabase(item: Result)
     func removeItemFromDatabase(id : Int)
-    func loadDataFromDB() -> [Result]
+    func loadDataFromDB() -> [FavoriteItemModel]
     func deleteAllData()
+    func isItemInFav(id : Int) -> Bool
 }

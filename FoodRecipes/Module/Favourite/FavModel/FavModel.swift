@@ -7,8 +7,14 @@
 
 import Foundation
 
-class FavoritesModel {
+struct FavoriteItemModel {
     
+    var recipeId : Int?
+    var recipeServings : Int?
+    var recipeChef : String?
+    var recipeName : String?
+    var recipeType : String?
+    var recipeImage : String?
     
     
 }

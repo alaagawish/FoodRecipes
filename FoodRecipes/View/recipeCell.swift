@@ -31,14 +31,15 @@ class RecipeCell: UITableViewCell {
     }
     
     @IBAction func btnFavAction(_ sender: Any) {
+        var image:UIImage!
         if isFav{
-            if let image = UIImage(named: "fillFavIcon") {
-                FavIconButton.setImage(image, for: .normal)
-            }
+             image = UIImage(named: "fillFavIcon")
+             FavIconButton.setImage(image, for: .normal)
+            
         }else{
-            if let image = UIImage(named: "favicon") {
-                FavIconButton.setImage(image, for: .normal)
-            }
+             image = UIImage(named: "favicon")
+             FavIconButton.setImage(image, for: .normal)
+            
         }
         isFav.toggle()
         

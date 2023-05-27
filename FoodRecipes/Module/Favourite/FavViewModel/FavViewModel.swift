@@ -11,7 +11,7 @@ class FavouriteViewModel{
     
     var bindResultToView : (()->()) = {}
     
-    var allFavRecipes : [Result] = [] {
+    var allFavRecipes : [FavoriteItemModel] = [] {
         didSet{
             DispatchQueue.main.async {
                 self.bindResultToView()
@@ -21,7 +21,7 @@ class FavouriteViewModel{
     
     var databaseInstance : LocalDataSource
     
-    init(databaseInstance: CoreDataLocalDataSource) {
+    init(databaseInstance: RecipeRepo) {
         
         self.databaseInstance = databaseInstance
     }
@@ -34,7 +34,6 @@ class FavouriteViewModel{
     func deleteFavItem(itemKey : Int){
         
         self.databaseInstance.removeItemFromDatabase(id: itemKey)
-        
         self.loadCachingData()
     }
     
