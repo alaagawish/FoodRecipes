@@ -1,5 +1,8 @@
 
 FoodRecipes.xcodeproj/xcshareddata/xcschemes/FoodRecipes.xcscheme
+
+FoodRecipes.xcworkspace/xcuserdata/alaa.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+
 #########################
 # .gitignore file for Xcode4 and Xcode5 Source projects
 #
@@ -220,3 +223,4 @@ xcuserdata/
 # CocoaPods
 Podfile.lock
 Pods
+

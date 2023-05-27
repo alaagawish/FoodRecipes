@@ -1,0 +1,98 @@
+
+{
+    "count": 18,
+    "results": [
+        {
+            "created_at": 1499472424,
+            "approved_at": 1501117595,
+            "renditions": [
+                {
+                    "maximum_bit_rate": null,
+                    "container": "mp4",
+                    "url": "https://vid.tasty.co/output/43073/mp4_640x640/1499472897",
+                    "duration": 81135,
+                    "content_type": "video/mp4",
+                    "aspect": "square",
+                    "minimum_bit_rate": null,
+                    "name": "mp4_640x640",
+                    "height": 640,
+                    "poster_url": "https://img.buzzfeed.com/video-transcoder-prod/output/43073/mp4_640x640/1499472897_00001.png",
+                    "file_size": 75165882,
+                    "bit_rate": 7412,
+                    "width": 640
+                },
+                {
+                    "bit_rate": 7473,
+                    "minimum_bit_rate": null,
+                    "name": "mp4_720x720",
+                    "height": 720,
+                    "duration": 81135,
+                    "poster_url": "https://img.buzzfeed.com/video-transcoder-prod/output/43073/mp4_720x1280/1499472897_00001.png",
+                    "file_size": 75786015,
+                    "url": "https://vid.tasty.co/output/43073/mp4_720x1280/1499472897",
+                    "content_type": "video/mp4",
+                    "aspect": "square",
+                    "width": 720,
+                    "maximum_bit_rate": null,
+                    "container": "mp4"
+                }
+            ],
+            "cook_time_minutes": null,
+            "seo_path": null,
+            "num_servings": 6,
+            "show": {
+                "name": "Tasty: Tasty Vegetarian",
+                "id": 49
+            },
+            "video_id": 23296,
+            "updated_at": 1683305190,
+            "total_time_tier": null,
+            "user_ratings": {
+                "count_positive": 1226,
+                "score": 0.974563,
+                "count_negative": 32
+            },
+            "id": 1274,
+            "brand": null,
+            "tips_and_ratings_enabled": true,
+            "inspired_by_url": "http://cookieandkate.com/2016/spicy-vegan-black-bean-soup/",
+            "total_time_minutes": null,
+            "video_ad_content": "none",
+            "beauty_url": null,
+            "topics": [
+                {
+                    "name": "Best Vegetarian",
+                    "slug": "best-vegetarian"
+                },
+                {
+                    "name": "Healthy Eating",
+                    "slug": "healthy"
+                },
+                {
+                    "name": "Romantic Dinners",
+                    "slug": "romantic-dinners"
+                },
+                {
+                    "name": "Winter Recipes",
+                    "slug": "winter"
+                },
+                {
+                    "name": "Light Bites",
+                    "slug": "light-bites"
+                },
+                {
+                    "name": "Lunch",
+                    "slug": "lunch"
+                },
+                {
+                    "name": "American",
+                    "slug": "american"
+                },
+                {
+                    "name": "Mexican",
+                    "slug": "mexican"
+                }
+            ]
+        }
+    ]
+}

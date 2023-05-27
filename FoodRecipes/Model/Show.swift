@@ -1,20 +1,16 @@
 //
-//  Credit.swift
+//  Show.swift
 //  FoodRecipes
 //
 //  Created by Alaa on 26/05/2023.
 //
 
 import Foundation
-
-struct Credit: Decodable{
-    
+struct Show: Decodable{
     let name: String?
-    let type: String?
+    let id: Int?
     
     private enum CodingKeys: String, CodingKey {
         case name = "name"
-        case type = "type"
-    }
-
-}
+        case id = "id"
+    }}
