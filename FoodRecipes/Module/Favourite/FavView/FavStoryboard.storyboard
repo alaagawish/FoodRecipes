@@ -22,9 +22,11 @@
                                 <rect key="frame" x="3.3333333333333428" y="106" width="371.66666666666663" height="706"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="no favourite place holder" translatesAutoresizingMaskIntoConstraints="NO" id="1a5-BA-CMN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no favourite place holder" translatesAutoresizingMaskIntoConstraints="NO" id="1a5-BA-CMN">
                                 <rect key="frame" x="54" y="255" width="267" height="316"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="316" id="WQb-JB-dwy"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eob-QX-CId">
                                 <rect key="frame" x="140" y="58.000000000000007" width="112.33333333333331" height="26.333333333333336"/>
@@ -37,8 +39,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eob-QX-CId" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="Bwn-dj-nsy"/>
+                            <constraint firstItem="1a5-BA-CMN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="C9D-Vz-Q0I"/>
                             <constraint firstAttribute="bottom" secondItem="8ue-aC-ytk" secondAttribute="bottom" id="CLS-iv-tr6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="1a5-BA-CMN" secondAttribute="bottom" constant="158" id="HLK-db-eq3"/>
                             <constraint firstItem="eob-QX-CId" firstAttribute="centerX" secondItem="8ue-aC-ytk" secondAttribute="centerX" constant="7" id="Ko3-Yy-bvB"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1a5-BA-CMN" secondAttribute="trailing" constant="54" id="OfH-mK-Drr"/>
+                            <constraint firstItem="1a5-BA-CMN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="54" id="PLR-2H-yjo"/>
                             <constraint firstItem="8ue-aC-ytk" firstAttribute="top" secondItem="eob-QX-CId" secondAttribute="bottom" constant="21.666666666666671" id="g1U-Bv-yys"/>
                             <constraint firstAttribute="trailing" secondItem="8ue-aC-ytk" secondAttribute="trailing" id="kKM-OL-3AS"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="eob-QX-CId" secondAttribute="trailing" constant="126" id="t9G-Fx-TOX"/>

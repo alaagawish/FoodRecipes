@@ -42,6 +42,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     setupIndicator()
 
+//    setLoading(isLoading: true)
+
     viewModel = HomeViewModel(netWorkingDataSource: Network(), locaDataSource: RecipeRepo.instance) // ok
     setupBindingDataToVC()
     viewModel.loadAllFavRecipes()
