@@ -107,7 +107,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "recipecell", for: indexPath) as! RecipeCell
 
-    result = viewModel.result?[indexPath.row]
+    self.result = viewModel.result?[indexPath.row]
       cell.setupCell(item: result!)
       
       if viewModel.checkIsItemInFav(id: result?.id ?? -1){
@@ -119,14 +119,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
       
       cell.bindResultToView = { [weak self] in
           
-          if ((self?.viewModel.checkIsItemInFav(id: self?.result?.id ?? -1)) == true){
+        if ((self?.viewModel.checkIsItemInFav(id: cell.item.id ?? -1)) == true){
               AlertType.confirmRemove(deleteHandler: {
-                  self?.viewModel.removeFavItem(id: self?.result?.id ?? -1)
+                  self?.viewModel.removeFavItem(id: cell.item.id ?? -1)
                   cell.setFavUI(isFav: true)
               }).showAlert(in: self!)
              
           }else{
-              self?.viewModel.addToFav(item: (self?.result!)!)
+              self?.viewModel.addToFav(item: (cell.item!))
               cell.setFavUI(isFav: false)
           }
           

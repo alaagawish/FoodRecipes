@@ -16,6 +16,7 @@ class RecipeCell: UITableViewCell {
     @IBOutlet weak var ChefNameLabel: UILabel!
     @IBOutlet weak var RecipeNameLabel: UILabel!
     @IBOutlet weak var FoodTypeLabel: UILabel!
+  var item: Result!
     var bindResultToView : ()->() = {}
     
     override func awakeFromNib() {
@@ -35,6 +36,7 @@ class RecipeCell: UITableViewCell {
     }
     
     func setupCell(item : Result!) {
+      self.item = item
         self.ChefNameLabel.text = "by " + (item.credits?[0].name ?? "")
         self.RecipeNameLabel.text = item.slug?.replacingOccurrences(of: "-", with: " ")
         self.servingsLabel.text = "\(item.numServings ?? 0)"
@@ -64,10 +66,5 @@ class RecipeCell: UITableViewCell {
     }
 
 
-
-//  override func layoutSubviews() {
-//          super.layoutSubviews()
-//    contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8))
-//      }
 
 }
