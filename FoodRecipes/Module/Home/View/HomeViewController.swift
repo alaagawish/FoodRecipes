@@ -108,10 +108,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     let cell = tableView.dequeueReusableCell(withIdentifier: "recipecell", for: indexPath) as! RecipeCell
 
     self.result = viewModel.result?[indexPath.row]
-    print("----------")
-    print(result?.name)
-    print(viewModel.result?[indexPath.row].name)
-    print("----------end--------")
       cell.setupCell(item: result!)
       
       if viewModel.checkIsItemInFav(id: result?.id ?? -1){
@@ -130,9 +126,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
               }).showAlert(in: self!)
              
           }else{
-            print("aaa3aaaaa")
-            print(self?.result?.name)
-            print("aaa3aaaaaend")
               self?.viewModel.addToFav(item: (cell.item!))
               cell.setFavUI(isFav: false)
           }
