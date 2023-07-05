@@ -27,6 +27,24 @@ class Network: NetworkProtocol{
             
         }
     }
-    
+    func getRecipeData(path: String, parameters: Parameters, handler: @escaping (Result?) -> Void){
+        
+        let headers: HTTPHeaders = [
+            "X-RapidAPI-Key": "0264cbf91bmsh7e61711554b7b6fp107e57jsn8d79ba4e5c1c",
+            "X-RapidAPI-Host": "tasty.p.rapidapi.com"
+        ]
+        
+        
+        AF.request("https://tasty.p.rapidapi.com/recipes/\(path)", parameters: parameters, headers: headers).responseDecodable(of: Result.self) { response in
+            switch response.result {
+            case .success(let data):
+                print("done")
+                handler(data)
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+            
+        }
+    }
     
 }

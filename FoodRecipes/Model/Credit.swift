@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct Credit: Decodable{
     
     let name: String?
@@ -15,4 +16,5 @@ struct Credit: Decodable{
         case name = "name"
         case type = "type"
     }
+
 }

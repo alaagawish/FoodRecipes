@@ -18,9 +18,7 @@ class NetworkMock: NetworkProtocol{
     let files = MockApiFileLoader().loadApiFiles()
     func getData(path: String, parameters: Alamofire.Parameters, handler: @escaping (FoodRecipes.MyResponse?) -> Void) {
         if isSuccess{
-//            print(files)
             handler(files)
-          //  handler(files[0])
         }else{
             handler(nil)
         }

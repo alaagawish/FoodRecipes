@@ -10,5 +10,7 @@ import Alamofire
 
 protocol NetworkProtocol{
     
-    func getData(path: String, parameters: Parameters, handler: @escaping (MyResponse?) -> Void) 
+    func getData(path: String, parameters: Parameters, handler: @escaping (MyResponse?) -> Void)
+    func getRecipeData(path: String, parameters: Parameters, handler: @escaping (Result?) -> Void)
+    
 }
