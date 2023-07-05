@@ -14,8 +14,9 @@ class LaunchScreenViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
             
             let storyboard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
-            let nav = storyboard.instantiateViewController(withIdentifier: home) 
-             nav.modalPresentationStyle = .fullScreen
+//            let nav = storyboard.instantiateViewController(withIdentifier: home)
+          let nav = storyboard.instantiateInitialViewController()!
+          nav.modalPresentationStyle = .fullScreen
             self.present(nav, animated: true, completion: nil)
         }
     }
