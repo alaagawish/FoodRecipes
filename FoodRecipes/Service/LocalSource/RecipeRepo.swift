@@ -55,7 +55,7 @@ class RecipeRepo : LocalDataSource {
         
         do{
             try contextManager.save()
-            print("The Items with id \(String(describing: item.id)) added to fav successfully .")
+          print("The Items \(String(describing: item.name)) with id \(String(describing: item.id)) added to fav successfully .")
         }catch let e{
             print("Error when add item to fav  : \(e.localizedDescription)")
         }
